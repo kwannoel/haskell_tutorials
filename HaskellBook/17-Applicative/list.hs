@@ -78,10 +78,29 @@ instance Functor ZipList' where
   fmap f (ZipList' xs) =
     ZipList' $ fmap f xs
 
-instance Applicative ZipList'
+instance Applicative ZipList' where
+  pure a = ZipList' (Cons a Nil)
+  (<*>) (ZipList' Nil) _ = ZipList' Nil
+  (<*>) _ (ZipList' Nil) = ZipList' Nil
+  (<*>) (ZipList' (Cons f fs)) (ZipList' (Cons x y)) =
+    ZipList'
+    (Cons (f x)
+          ((<*>) fs y ))
 
+data Validation e a =
+    Failure e
+  | Success a
+  deriving (Eq, Show)
 
+instance Functor (Validation e) where
+-- fmap :: (a -> b) -> f a -> f b
+  fmap f (Failure a) = Failure a
+  fmap f (Success a) = Success (f a)
 
+instance Monoid e =>
+         Applicative (Validation e) where
+  pure = undefined
+  (<*>) = undefined
 
 
 
