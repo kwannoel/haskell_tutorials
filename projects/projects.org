@@ -1,0 +1,4 @@
+* Setting up a project
+* stack new <name> new-template
+* Configure <name>.cabal
+* stack init
