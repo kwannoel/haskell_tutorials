@@ -1,4 +1,19 @@
+https://docs.haskellstack.org/en/stable/GUIDE/
 * Setting up a project
-* stack new <name> new-template
-* Configure <name>.cabal
-* stack init
+** stack new <project_name> new-template
+** stack build
+* Project tools
+** stack exec
+*** Runs executables
+* Inner Workings:
+** app/Main.hs, src/Lib.hs, test/Spec.hs
+*** Actual functionality of the project
+** README, LICENSE to actual impact on build
+** Stack.yaml
+*** Packages 
+**** which local(self) packages to build (can be remote or local files)
+*** resolver
+**** Which ghc version, package deps, etc...
+** Package.yaml - https://github.com/sol/hpack#quick-reference
+*** Use `stack ls dependencies` to list all deps
+** stack --resolver <lts resolver ver> build
