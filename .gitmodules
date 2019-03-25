@@ -1,0 +1,3 @@
+[submodule "talk/haskelltalk"]
+	path = talk/haskelltalk
+	url = git@github.com:kwannoel/haskelltalk.git
