@@ -1,0 +1,56 @@
+
+./compre.hs,756
+module Compre Compre2,3
+myLiftA2 myLiftA24,5
+newtype Reader Reader9,10
+  Reader { runReader runReader10,11
+instance Functor Functor (Reader r)12,13
+  fmap fmap13,14
+ask ask19,20
+asks asks22,23
+instance Applicative Applicative (Reader r)25,26
+  pure pure26,27
+  Reader Reader33,34
+instance Monad Monad (Reader r)36,37
+  return return37,38
+  (>(>>=)38,39
+  (R(Readerra)39,40
+newtype HumanName HumanName42,43
+newtype DogName DogName45,46
+newtype Address Address48,49
+data Person Person52,53
+  Person Person53,54
+  humanName humanName54,55
+  , dogName dogName55,56
+  , address address56,57
+data Dog Dog59,60
+  Dog Dog60,61
+  dogsName dogsName61,62
+  , dogsAddress dogsAddress62,63
+getDogRM getDogRM65,66
+
+./begin.hs,149
+module Begin Begin0,1
+boop boop4,5
+doop doop7,8
+bip bip10,11
+floop floop13,14
+bbop bbop16,17
+duwop duwop33,34
+boopDoop boopDoop36,37
+
+./warmingup.hs,336
+module WarmingUp WarmingUp1,2
+cap cap5,6
+rev rev8,9
+composed composed11,12
+fmapped fmapped14,15
+both both17,18
+tupled tupled20,21
+tupled' tupled'29,30
+tupled'' tupled''32,33
+newtype Reader Reader41,42
+  Reader { runReader runReader42,43
+instance Functor Functor (Reader r)44,45
+  fmap fmap45,46
+ask ask51,52
